@@ -193,7 +193,7 @@ class ViT(nn.Module):
         https://arxiv.org/abs/2010.11929
     """
 
-    @initializer
+    #@initializer
     def __init__(
         self,
         img_size=224,
@@ -398,7 +398,7 @@ class ViT(nn.Module):
     def forward(self, x):
         x, policies = self.forward_features(x)
         x = self.head(x)
-        return x, policies
+        return x#, policies
 
 
 def resize_pos_embed(posemb, posemb_new):
